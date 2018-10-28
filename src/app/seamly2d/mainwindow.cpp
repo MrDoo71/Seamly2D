@@ -2328,6 +2328,16 @@ void MainWindow::ActionDraw(bool checked)
         ui->actionDraw->setChecked(true);
         ui->actionDetails->setChecked(false);
         ui->actionLayout->setChecked(false);
+
+        //JD Put a wallpaper up!
+        //QSvgRenderer *wallpaperRenderer = new QSvgRenderer(QLatin1String("/mnt/hgfs/sandpitShare/L008/backdrop1.svg"));
+        QSvgRenderer *wallpaperRenderer = new QSvgRenderer(QLatin1String("/home/jase/Documents/testSquareAndCircle.svg"));
+        QGraphicsSvgItem *wallpaper = new QGraphicsSvgItem();
+        wallpaper->setSharedRenderer(wallpaperRenderer);
+        wallpaper->setZValue(-2.0); //so that it is behind the Valentina drawing.
+        wallpaper->setScale( 91.4/68.53 );//100/93.72 );//1.065 );
+        sceneDraw->addItem(wallpaper);
+
         SaveCurrentScene();
 
         currentScene = sceneDraw;

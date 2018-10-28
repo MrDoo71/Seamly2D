@@ -56,6 +56,8 @@
 #include "core/vcmdexport.h"
 #include "../vmisc/vlockguard.h"
 
+#include <QGraphicsSvgItem> //JD
+#include <QSvgRenderer> //JD
 #include <QPointer>
 
 namespace Ui
@@ -73,6 +75,9 @@ class DialogHistory;
 class VWidgetGroups;
 class VWidgetDetails;
 class QToolButton;
+class QGraphicsSvgItem; //JD
+class QSvgRenderer;//JD
+
 
 /**
  * @brief The MainWindow class main windows.
